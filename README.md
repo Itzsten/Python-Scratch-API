@@ -11,5 +11,5 @@ user = User('griffpatch')
 ```
 Now, let's say we wanted the profile picture.
 ```python
-link = user.link()
+link = user.profilepicture()
 ```
