@@ -82,6 +82,10 @@ Get the amounts of projects the user made:
 ```python
 print(User('griffpatch').projectsCount())
 ```
+Get link of user
+```python
+print(User('griffpatch').link())
+```
 # Projects
 Let's start by setting a project variable! We can use both links and ID's.
 ```python
@@ -94,6 +98,10 @@ print(project.title()) # In the Sky - Platformer
 Let's get the description!
 ```python
 print(project.description()) # ...
+```
+Get link of project
+```python
+print(Project('501406149').link())
 ```
 Let's get the instructions!
 ```python
