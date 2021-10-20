@@ -17,3 +17,4 @@ This gives us the following:
 ```
 https://cdn2.scratch.mit.edu/get_image/user/1882674_90x90.png?v=
 ```
+Which represents a link to the users profile picture!
