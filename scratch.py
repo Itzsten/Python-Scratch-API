@@ -1,3 +1,4 @@
+# Scratch API made by Itzsten © Copyright 2019-2021
 import json
 try:
     import requests
