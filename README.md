@@ -13,3 +13,7 @@ Now, let's say we wanted the profile picture.
 ```python
 link = user.profilepicture()
 ```
+This gives us the following:
+```
+https://cdn2.scratch.mit.edu/get_image/user/1882674_90x90.png?v=
+```
