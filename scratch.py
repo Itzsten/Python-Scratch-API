@@ -40,3 +40,9 @@ class User(object):
         return c
     def followersCount(self):
         return len(json.loads(requests.get('https://api.scratch.mit.edu/users/'+ self.user+'/followers').text))
+    def projects(self):
+        c = []
+        for i in range(0, len(json.loads(requests.get(f'https://api.scratch.mit.edu/users/{self.user}/projects').text))): c.append(json.loads(requests.get(f'https://api.scratch.mit.edu/users/{self.user}/projects').text)[i]["id"])
+        return c
+    def projectsCount(self):
+        return len(json.loads(requests.get('https://api.scratch.mit.edu/users/'+ self.user+'/projects').text))
