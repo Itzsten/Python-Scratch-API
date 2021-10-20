@@ -48,6 +48,10 @@ class User(object):
         return len(json.loads(requests.get('https://api.scratch.mit.edu/users/'+ self.user+'/projects').text))
     def link(self):
         return 'https://scratch.mit.edu/users/' + self.user + '/'
+    def favorites(self):
+        c = []
+        for i in range(0, len(json.loads(requests.get(f'https://api.scratch.mit.edu/users/{self.user}/favorites').text))): c.append(json.loads(requests.get(f'https://api.scratch.mit.edu/users/{self.user}/favorites').text)[i]["id"])
+        return c
 class Project(object):
     def __init__(self, project):
         if 'https://' in project: usp = project.split('/')[4]
