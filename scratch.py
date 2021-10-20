@@ -89,5 +89,9 @@ class Project(object):
         c = []
         for i in range(0, len(json.loads(requests.get(f'https://api.scratch.mit.edu/projects/{self.project}/remixes').text))): c.append(json.loads(requests.get(f'https://api.scratch.mit.edu/projects/{self.project}/remixes').text)[i]["id"])
         return c
-insky = Project('https://scratch.mit.edu/projects/501406149/')
-print(insky.remixes())
+    def exists(project):
+        try:
+            v = json.loads(requests.get('https://api.scratch.mit.edu/projects/' + str(project)).text)["code"]
+            return False
+        except:
+            return True
