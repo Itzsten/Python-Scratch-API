@@ -25,3 +25,13 @@ Well, we can do that by using the following:
 print(User('griffpatch').scratchteam()) # False
 print(User('Za-Chary').scratchteam())   # True
 ```
+Get User ID:
+```python
+print(User('griffpatch').id()) # 1882674 (User ID of griffpatch)
+```
+You can also get users from links:
+```python
+linkuser = User('https://scratch.mit.edu/griffpatch/')
+normal = User('griffpatch')
+# These to work exactly the same.
+```
