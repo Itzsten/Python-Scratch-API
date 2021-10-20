@@ -40,6 +40,3 @@ class User(object):
         return c
     def followersCount(self):
         return len(json.loads(requests.get('https://api.scratch.mit.edu/users/'+ self.user+'/followers').text))
-      
-gdsten = User('geometrysten')
-print(gdsten.followersCount())
