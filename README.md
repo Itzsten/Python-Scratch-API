@@ -82,3 +82,80 @@ Get the amounts of projects the user made:
 ```python
 print(User('griffpatch').projectsCount())
 ```
+# Projects
+Let's start by setting a project variable! We can use both links and ID's.
+```python
+project = Project('https://scratch.mit.edu/projects/501406149/') # You can use links or the last number (Project ID (501406149 in this case))
+```
+Let's get the title!
+```python
+print(project.title()) # In the Sky - Platformer
+```
+Let's get the description!
+```python
+print(project.description()) # ...
+```
+Let's get the instructions!
+```python
+print(project.instructions()) # ...
+```
+Let's see if a project is visible!
+```python
+print(project.visibility()) # True
+```
+Check if a project is public!
+```python
+print(project.public()) # True
+```
+Check if comments is allowed on a project!
+```python
+print(project.commentsAllowed()) # True
+```
+Let's see who made the project!
+```python
+print(project.author()) # Geometrysten2
+```
+Let's get the projects thumbnail!
+```python
+print(project.thumbnail()) # (link to thumbnail)
+```
+Let's see when the project was created!
+```python
+print(project.created())
+```
+Let's see when the project was shared publicly!
+```python
+print(project.shared())
+```
+Let's see when the last time that the project was modified!
+```python
+print(project.modified())
+```
+Let's get the projects amount of views!
+```python
+print(project.views())
+```
+Let's get the projects amount of favorites!
+```python
+print(project.favorites())
+```
+Let's get the projects amount of loves!
+```python
+print(project.loves())
+```
+Let's get the projects amount of remixes!
+```python
+print(project.remixesCount())
+```
+Let's get the remixes projects ID's!
+```python
+print(project.remixes())
+```
+Let's check if a project exists!
+```python
+print(Project.exists(50305)) # False
+```
+Let's check the latest projects posted!
+```python
+print(Project.latestprojects())
+```
