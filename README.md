@@ -86,6 +86,10 @@ Get link of user
 ```python
 print(User('griffpatch').link())
 ```
+Get list of project ID's marked as favorite from user:
+```python
+print(User('mref').favorites())
+```
 # Projects
 Let's start by setting a project variable! We can use both links and ID's.
 ```python
