@@ -159,3 +159,16 @@ Let's check the latest projects posted!
 ```python
 print(Project.latestprojects())
 ```
+# Scratch Main
+Get Scratch website:
+```python
+print(Scratch.website())
+```
+Get Scratch API:
+```python
+print(Scratch.api())
+```
+Get Scratch help E-Mail:
+```python
+print(Scratch.help())
+```
