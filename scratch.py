@@ -46,3 +46,18 @@ class User(object):
         return c
     def projectsCount(self):
         return len(json.loads(requests.get('https://api.scratch.mit.edu/users/'+ self.user+'/projects').text))
+    def link(self):
+        return 'https://scratch.mit.edu/users/' + self.user + '/'
+class Project(object):
+    def __init__(self, project):
+        if 'https://' in project: usp = project.split('/')[4]
+        else: usp = project
+        self.project = usp
+    def link(self):
+        return 'https://scratch.mit.edu/users/' + self.project + '/'
+    def title(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["title"]
+    def description(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["description"]
+    def instructions(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["instructions"]
