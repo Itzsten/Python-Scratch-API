@@ -18,3 +18,10 @@ This gives us the following:
 https://cdn2.scratch.mit.edu/get_image/user/1882674_90x90.png?v=
 ```
 Which represents a link to the users profile picture!
+
+So, how do we check if a user is in Scratchteam?
+Well, we can do that by using the following:
+```python
+print(User('griffpatch').scratchteam()) # False
+print(User('Za-Chary').scratchteam())   # True
+```
