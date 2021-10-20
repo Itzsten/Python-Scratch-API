@@ -95,3 +95,8 @@ class Project(object):
             return False
         except:
             return True
+    def latestprojects():
+        c = []
+        for i in range(0, len(json.loads(requests.get(f'https://api.scratch.mit.edu/proxy/featured').text))): 
+            c.append(json.loads(requests.get('https://api.scratch.mit.edu/proxy/featured').text)['community_newest_projects'][i]["id"])
+        return c
