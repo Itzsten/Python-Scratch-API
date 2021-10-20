@@ -20,6 +20,26 @@ class User(object):
         return json.loads(requests.get('https://api.scratch.mit.edu/users/' + self.user).text)["username"]
     def joindate(self):
         return json.loads(requests.get('https://api.scratch.mit.edu/users/' + self.user).text)["history"]["joined"]
+    def profilepicture(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/users/' + self.user).text)["profile"]["images"]["90x90"]
+    def status(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/users/' + self.user).text)["profile"]["status"]
+    def bio(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/users/' + self.user).text)["profile"]["bio"]
+    def country(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/users/' + self.user).text)["profile"]["country"]
+    def following(self):
+        c = []
+        for i in range(0, len(json.loads(requests.get('https://api.scratch.mit.edu/users/geometrysten2/following').text))): c.append(json.loads(requests.get('https://api.scratch.mit.edu/users/geometrysten2/following').text)[i]["username"])
+        return c
+    def followingCount(self):
+        return len(json.loads(requests.get('https://api.scratch.mit.edu/users/geometrysten2/following').text))
+    def followers(self):
+        c = []
+        for i in range(0, len(json.loads(requests.get('https://api.scratch.mit.edu/users/geometrysten2/followers').text))): c.append(json.loads(requests.get('https://api.scratch.mit.edu/users/geometrysten2/followers').text)[i]["username"])
+        return c
+    def followersCount(self):
+        return len(json.loads(requests.get('https://api.scratch.mit.edu/users/geometrysten2/followers').text))
       
 gdsten = User('geometrysten2')
-print(gdsten.joindate())
+print(gdsten.followersCount())
