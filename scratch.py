@@ -83,5 +83,11 @@ class Project(object):
         return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["stats"]["loves"]
     def favorites(self):
         return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["stats"]["favorites"]
-    def remixes(self):
+    def remixesCount(self):
         return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["stats"]["remixes"]
+    def remixes(self):
+        c = []
+        for i in range(0, len(json.loads(requests.get(f'https://api.scratch.mit.edu/projects/{self.project}/remixes').text))): c.append(json.loads(requests.get(f'https://api.scratch.mit.edu/projects/{self.project}/remixes').text)[i]["id"])
+        return c
+insky = Project('https://scratch.mit.edu/projects/501406149/')
+print(insky.remixes())
