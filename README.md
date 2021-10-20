@@ -7,4 +7,5 @@ Let's start by setting a User variable!
 
 ```python
 from scratch import *
-user = User('griffpatch')```
+user = User('griffpatch')
+```
