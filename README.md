@@ -9,3 +9,7 @@ Let's start by setting a User variable!
 from scratch import *
 user = User('griffpatch')
 ```
+Now, let's say we wanted the profile picture.
+```python
+link = user.link()
+```
