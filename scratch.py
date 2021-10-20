@@ -61,3 +61,27 @@ class Project(object):
         return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["description"]
     def instructions(self):
         return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["instructions"]
+    def visibility(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["visibility"]
+    def public(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["public"]
+    def commentsAllowed(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["comments_allowed"]
+    def author(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["author"]["username"]
+    def thumbnail(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["image"]
+    def created(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["history"]["created"]
+    def shared(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["history"]["shared"]
+    def modified(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["history"]["modified"]
+    def views(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["stats"]["views"]
+    def loves(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["stats"]["loves"]
+    def favorites(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["stats"]["favorites"]
+    def remixes(self):
+        return json.loads(requests.get('https://api.scratch.mit.edu/projects/' + self.project).text)["stats"]["remixes"]
