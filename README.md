@@ -35,3 +35,8 @@ linkuser = User('https://scratch.mit.edu/griffpatch/')
 normal = User('griffpatch')
 # These to work exactly the same.
 ```
+exactUsername gives us the exact name.
+```python
+user = User('GrIfFpAtCh')
+print(user.exactUsername()) # griffpatch
+```
