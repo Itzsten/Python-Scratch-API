@@ -1,7 +1,7 @@
 # Python-Scratch-API
 A Python script to interact with the Scratch API.
 
-Start by downloading the Scratch.py file, and make sure you have the library requests installed on your device.
+Start by downloading the Scratch.py file, and make sure you have the library "requests" installed on your device.
 
 # Users
 Let's start by setting a User variable!
